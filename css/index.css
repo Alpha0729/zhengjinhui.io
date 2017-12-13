@@ -1,0 +1,428 @@
+/*通用样式*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    border: none;
+    display: block;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+.clearFix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.clear {
+    zoom: 1;
+}
+
+/*这是分割线熟悉*/
+.line {
+    text-align: center;
+    line-height: 0px;
+}
+
+.line span {
+    display: inline-block;
+    width: 90%;
+    border-top: 1px solid #ccc;
+}
+
+/*标题*/
+.title {
+    line-height: 1.15rem;
+    font-size: .65rem;
+    font-style: normal;
+    display: inline-block;
+    border-left: 3px solid #ef534e;
+    padding-left: 0.5rem;
+    color: #333333;
+}
+
+.title-h4 {
+    height: 1.7rem;
+    border-bottom: 1px solid #ccc;
+}
+
+/*opacity:0.5;filter:alpha(opacity=50);*/
+
+/*元素样式*/
+.box {
+    background-color: #efefef;
+    overflow: hidden;
+}
+
+.head {
+    width: 26rem;
+    height: 8.26rem;
+    overflow: hidden
+}
+
+.head ul {
+    width: 1280px;
+}
+
+.head ul li {
+    float: left;
+}
+
+.head ul li a {
+    line-height: 0;
+}
+
+.head ul li a img {
+    width: 16rem;
+}
+
+.nav {
+    background-color: #fff;
+    margin: 0.2rem 0;
+}
+
+.nav li {
+    width: 25%;
+    height: 3.6rem;
+    float: left;
+}
+
+.nav ul li {
+    text-align: center;
+}
+
+.nav ul li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background: url("../images/show.png") no-repeat center 20%;
+    background-size: 1.8rem 1.8rem;
+
+}
+
+.nav ul li span {
+    display: block;
+    margin-top: 2.6rem;
+    font-size: 0.6rem;
+    color: #000
+}
+
+/*主题内容content*/
+.content {
+    background-color: #fff;
+
+}
+
+.content h4 {
+    height: 1.7rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.content h4 i {
+    line-height: 1.15rem;
+    font-size: .65rem;
+    font-style: normal;
+    display: inline-block;
+    border-left: 3px solid #ef534e;
+    padding-left: 0.5rem;
+    color: #333333;
+}
+
+.content .contentFund {
+    padding: 0 .65rem 0 .65rem;
+
+}
+
+.content .contentFund .contentFund-ul {
+
+}
+
+.content .contentFund .contentFund-ul .contentFund-ul-li {
+    padding: 0.65rem 0 .65rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.content .contentFund .contentFund-today {
+    display: block;
+
+}
+
+.content .contentFund h5 {
+    font-size: .65rem;
+    color: #333;
+}
+
+.content .contentFund .contentFund-today .contentFund-today-right-left, .contentFund-today-right {
+    margin-top: 0.65rem;
+}
+
+.content .contentFund .contentFund-today .contentFund-today-right-left {
+    width: 35%;
+
+}
+
+.content .contentFund .contentFund-today .contentFund-today-right {
+    margin-left: .3rem;
+}
+
+.content .contentFund .contentFund-today p {
+    line-height: 100%;
+    font-size: .6rem;
+    margin-top: 0.75rem;
+}
+
+.content .contentFund ul li div b, i {
+    line-height: 100%;
+    color: #ef534e;
+    font-size: 0.6rem;
+}
+
+.content .contentFund ul li div i {
+    padding: 0.2rem 0.1rem 0.1rem;
+    border: 1px solid #ff4455;
+    -webkit-border-radius: 0.25rem;
+    -moz-border-radius: 0.25rem;
+    border-radius: 0.25rem;
+    font-style: normal;
+}
+
+.content .content-footer {
+    text-align: center;
+    line-height: 100%;
+}
+
+.content .content-footer a {
+    padding: .2rem;
+    display: block;
+    line-height: 100%;
+}
+
+.content .content-footer a span {
+    color: #333;
+    font-size: .7rem;
+}
+
+.ranking {
+    margin-top: .5rem;
+    padding: 0 0;
+}
+
+.ranking .h4 {
+    border-bottom: 1px solid #ccc;
+    padding: .4rem 0;
+    height: 1.15rem;
+    overflow: hidden;
+    font-size: .6rem;
+}
+
+.ranking h4 i {
+    float: left;
+}
+
+.ranking h4 div {
+    line-height: 1.15rem;
+    font-size: 0.6rem;
+    float: right;
+}
+
+.ranking h4 div span {
+    overflow: hidden;
+    background-color: #efefef;
+    border-radius: 1rem;
+    padding: .1rem .8rem;
+    margin-right: .2rem;
+}
+
+.ranking .content-head {
+}
+
+.ranking .content-head .table {
+    display: block;
+}
+
+.ranking .content-head tr, tbody {
+    width: 100%;
+    display: block
+}
+
+.ranking .content-head th, td {
+    /*border:1px solid #000;
+    下面两条设置表格之间的间距
+    boder-collapse:separate;
+    border-spacing:0;*/
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 0.6rem;
+    color: #333;
+    width: 32%;
+    display: inline-block;
+    text-align: center;
+}
+
+.ranking .content-head td a {
+    color: #333;
+}
+
+.ranking .table .table-profit {
+    color: #ef534e;
+}
+
+.video {
+    margin-top: .5rem;
+}
+
+.video .video-content ul li {
+    padding: .4rem 0 0 .4rem;
+
+}
+
+.video .video-content ul li a {
+    display: block;
+    padding-bottom: .4rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.video .video-content .video-content-left {
+    overflow: hidden;
+    width: 4.5rem;
+    height: 4.5rem;
+    position: relative;
+
+}
+
+.video .video-content .video-content-left .video-content-left-bottom {
+    width: 100%;
+    height: 100%;
+}
+
+.video .video-content .video-content-left .video-content-left-mask {
+    position: absolute;
+    top: 1.125rem;
+    left: 1.125rem;
+    opacity: .5;
+    width: 50%;
+    height: 50%;
+    z-index: 99;
+    -webkit-transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    -ms-transition: opacity .5s;
+    -o-transition: opacity .5s;
+    transition: opacity .5s;
+}
+
+.video .video-content .video-content-left .video-content-left-mask:hover {
+    opacity: 1;
+}
+
+.video .video-content .video-content-right {
+    width: 10rem;
+    margin-left: .7rem;
+}
+
+.video .video-content .video-content-right h6 {
+    line-height: 1rem;
+    font-weight: normal;
+    font-size: .6rem;
+    color: #333;
+    /*元素盒子*/
+    overflow: hidden;
+    /*将对象作为弹性伸缩盒子模型显示*/
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    /*水平排列元素*/
+    -webkit-box-orient: vertical;
+}
+
+.video .video-content .video-content-right p {
+    margin-top: .4rem;
+    font-size: .6rem;
+    color: #333;
+}
+
+.video .video-content .video-content-right {
+}
+
+.new {
+    margin-top: .5rem;
+}
+
+.new .new-content ul li {
+    padding: .4rem .4rem 0 .4rem;
+}
+.new .new-content ul li a{
+    padding-bottom:.4rem;
+    display: block;
+    border-bottom: 1px solid #ccc;
+}
+.new .new-content .new-content-left {
+    width: 4.5rem;
+    height: 4.5rem;
+    overflow: hidden;
+}
+.new .new-content .new-content-left img{
+    width: 4.5rem;
+    height: 4.5rem;
+}
+.new .new-content .new-content-right{
+    font-size: .6rem;
+    color: #333;
+    width: 10rem;
+    margin-left: .6rem;
+    height: 4.5rem;
+}
+.new .new-content .new-content-right h6{
+    font-size:.6rem;
+    line-height: 1rem;
+    font-weight: normal;
+    overflow: hidden;
+    /*将对象作为弹性伸缩盒子模型显示*/
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    text-overflow: ellipsis;
+    /*水平排列元素*/
+    -webkit-box-orient: vertical;
+}
+.new .new-content .new-content-right .new-content-right-footer{
+    margin-top: .7rem;
+}
+.new .new-content .new-content-right .new-content-right-name{
+    margin-left: .6rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
