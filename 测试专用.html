@@ -5,20 +5,118 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title id="title">Document</title>
     <style>
-        .img{
-            position: absolute;top:0;left:0;
-            opacity: 0.5;
-            transition:opacity .5s ;
+        body{overflow: hidden;}
+        *{padding: 0;margin: 0;}
+        #box{width: 800px;
+            height: 200px;
+            overflow: hidden;
         }
-        .img:hover{opacity: 1;}
+        li{
+            float: left;
+            list-style: none;
+            width: 200px;
+            height: 100%;
+        }
+        #div{ overflow:hidden;
+            margin: 100px auto;
+            width: 200px;
+            height: 200px;background-color: #CCC;transition:background 1s ;}
+        #bbb{
+            width: 200px;
+            height: 200px;background-color:#b4005a}
     </style>
+    <script>
+        /*window.onload=function () {
+            var oBox=document.getElementById('box');
+            var oT=document.getElementById('title');
+            oBox.onmousedown=function (ev) {
+                var oEvent=ev || window.event;
+                var oFF=oEvent.clientX;
+                oBox.onmousemove=function (ev) {
+                    var oEvent=ev || window.event;
+                    console.log(oEvent);
+                    oT.innerHTML=oEvent.clientX;
+                };
+                oBox.onmouseup=function (ev) {
+                    var oEvent=ev || window.event;
+                    var oNo=oEvent.clientX;
+                    console.log(oFF);
+                    var all=oNo-oFF;
+                    //alert(all);
+                    if(all>80){
+                        //alert("从左往右滑动了");
+                        oBox.style.backgroundColor='green';
+                    }if(all<-80){
+                        //alert("从右往左滑动了");
+                        oBox.style.backgroundColor='yellow';
+                    }
+                    oBox.onmousemove=null;
+                }
+
+            }
+        }*/
+    </script>
+    <script>
+
+    </script>
+    <script>
+        window.onload=function(ev){
+            //var oEvent=ev || window.event;
+            var oBox=document.getElementById('box');
+            var oDiv=document.getElementById('div');
+            var oT=document.getElementById('title');
+            var aLi=document.getElementsByTagName('li');
+            oBox.addEventListener('touchstart',abc,false);
+            function abc(ev) {
+                var oEvent=ev || window.event;
+                var oX1=oEvent.targetTouches[0].clientX;
+                console.log(oX1);
+                var dir=null;
+                oBox.addEventListener('touchend',function (ev) {
+                    var oEvent = ev || window.event;
+                    var X=oEvent.changedTouches[0].clientX;
+                    console.log(X);
+                    if (oX1-X<-50){
+                        dir=dir-200;
+                        oBox.style.marginLeft=dir+"px";
+                        console.log(oX1-X+"aa");
+                        //oBox.removeEventListener("touchstart",abc);
+                    }if(oX1-X>50){
+                        console.log(oX1-X);
+                        parseInt(dir);
+                        dir=dir+200;
+                        oBox.style.marginLeft=dir+"px";
+                    }else {
+                        //oBox.removeEventListener("touchstart",abc);
+                    }
+                    return dir;
+                },false);
+            }
+        }
+    </script>
 </head>
 <body>
-<div style="position: relative;">
-    <img src="images/green.png" alt="" />
-    <img class="img" width="200" height="200" src="images/lay.png" alt="">
+<div id="div">
+    <ul id="box">
+        <li style="background-color: #0f7595">111</li>
+        <li style="background-color: green">222</li>
+        <li style="background: #e26e0f;">333</li>
+        <li style="background-color: #b4005a;">444</li>
+    </ul>
 </div>
 </body>
 </html>
+<!--
+<script>
+    window.onload=function () {
+    var oBox=document.getElementById('bbb');
+    alert(oBox)
+    var i=0;
+    oBox.onclick=function () {
+    alert(i++)
+    }
+    }
+</script>-->
+
